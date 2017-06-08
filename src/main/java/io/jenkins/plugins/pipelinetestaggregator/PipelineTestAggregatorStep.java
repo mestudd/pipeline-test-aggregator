@@ -6,11 +6,11 @@ import org.jenkinsci.plugins.workflow.steps.Step;
 import org.jenkinsci.plugins.workflow.steps.StepContext;
 import org.jenkinsci.plugins.workflow.steps.StepExecution;
 import org.jenkinsci.plugins.workflow.steps.SynchronousStepExecution;
+import org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper;
 
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
 
-import org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper;
 
 import hudson.model.Run;
 import hudson.model.TaskListener;
@@ -22,26 +22,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-//import java.io.Serializable;
-//import hudson.Extension;
-//import org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.ProxyWhitelist;
-//import org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.StaticWhitelist;
-//import org.jenkinsci.plugins.workflow.cps.CpsScript;
-//import org.jenkinsci.plugins.workflow.cps.GlobalVariable;
-
-//import java.io.IOException;
-
 public class PipelineTestAggregatorStep extends Step {
-	//private String job;
 	private RunWrapper job;
 
 	@DataBoundConstructor
-	//public PipelineTestAggregatorStep(String job) {
 	public PipelineTestAggregatorStep(RunWrapper job) {
 		this.job = job;
 	}
 
-	//public String getJob() {
 	public RunWrapper getJob() {
 		return job;
 	}
