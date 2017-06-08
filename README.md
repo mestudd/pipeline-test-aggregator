@@ -28,3 +28,4 @@ Changelog
 * Initial release
 * Support JUnit test results
 * Support Pipeline Test Aggregator test results
+* Show project action for test results
